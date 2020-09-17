@@ -67,8 +67,8 @@ a:hover{
   border-bottom: .1rem solid rgb(19, 15, 15);
 }
 .product-img{
-  max-width: 30rem;
-  max-height: 40rem;
+  width: 30rem;
+  height: 40rem;
 }
 .product{
   display: flex;
@@ -137,3 +137,19 @@ h2{
   justify-content: center;
   align-items: center;
 }
+
+/* details-product */
+ .details{
+   display: flex;
+   align-items: flex-start;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   padding:10rem 10rem 10rem 10rem;
+  height: 100%;
+ }
+ ul li {
+   list-style-type: none;
+ }
+ .product-details li, .product-action li {
+   margin-top: 1rem;
+ }
