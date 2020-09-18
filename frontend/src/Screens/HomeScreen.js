@@ -5,6 +5,7 @@ import axios from 'axios';
 
 function HomeScreen (props){
 
+  // using React hooks, https://reactjs.org/docs/hooks-intro.html
   const [products, setProducts] = useState([]);
   useEffect (() => {
     const fetchData = async () => {
