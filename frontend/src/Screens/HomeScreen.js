@@ -1,15 +1,28 @@
-import React from 'react';
-import dataArray from '../dataArray';
+import React, { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
+import axios from 'axios';
 
 
 function HomeScreen (props){
+
+  const [products, setProducts] = useState([]);
+  useEffect (() => {
+    const fetchData = async () => {
+      const {data} = await axios.get("/api/products");
+      setProducts(data)
+    }
+    fetchData ();
+    return () => {
+
+    };
+  }, [ ]
+  )
     return(
     <div>
          <h1>HomeScreen </h1>
         <ul className="products">
                   {
-                    dataArray.products.map((product) => {
+                    products.map((product) => {
                       return (
                       <li key={product.id}>
                           <div className="product">
